@@ -50,3 +50,11 @@ div#test {
 }
 .cf:after {clear: both;}
 .cf {*zoom: 1;}
+
+
+.alert {
+  margin-bottom: 0px;
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+}

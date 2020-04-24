@@ -1,3 +1,92 @@
-// Place all the styles related to the Users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/*=============================
+  共通レイアウト
+==============================*/
+body {
+  background-color: rgba(253, 245, 230, 0.5);
+  font-family:'メイリオ', 'Meiryo','ＭＳ ゴシック','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+  }
+  
+  
+/*=============================
+  new.html.erb
+==============================*/
+/*-- header ---*/
+header {
+  height: 64px;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  /* background-color: gray; */
+  background-color: rgba(22, 22, 28, 0.4);
+  
+}
+
+.header-logo {
+    float: left;
+    padding-left: 20px;
+    color: white;
+    font-size: 22px;
+    line-height: 64px;
+  }
+  
+.header-logo a{
+    color: white;
+    font-size: 22px;
+  }
+  
+.header-menus {
+    float: right;
+    padding-right: 20px;
+  }
+  
+.header-menus li {
+    float: left;
+    line-height: 64px;
+    font-size: 13px;
+    color: white;
+    padding-left: 15px;
+  }
+  
+.header-menus a {
+    float: left;
+    font-size: 13px;
+    color: white;
+  }
+  
+.header-menus input[type="submit"] {
+    padding: 0 20px;
+    float: left;
+    line-height: 64px;
+    color: white;
+    margin: 0;
+    font-size: 20px;
+  }
+  
+/*--- form ---*/
+  
+.form-control {
+  height: 45px;
+}
+
+/* .users-new-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-position: center center;
+  background-attachment: fixed; 
+} */
+
+.users-new-container {
+  padding-top: 220px;
+  flex-direction: column;
+}
+
+.text-center {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fda832;
+}
+
+.form-group {
+  text-align: center;
+  margin-bottom: 20px;
+}
