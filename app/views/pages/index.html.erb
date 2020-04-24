@@ -7,10 +7,10 @@
   </div>
   <ul class="header-menus">
     <li>
-      <a href="#">新規登録</a>
+      <%= link_to '新規登録', new_user_path, class: 'btn-block' %>
     </li>
     <li>
-      <a href="#">ログイン</a>
+      <%= link_to 'ログイン', new_user_path, class: 'btn-block' %>
     </li>
   </ul>
 </header>
@@ -61,10 +61,12 @@
     </div>
     
     <div class="step-btn-group">
+      <%= link_to new_user_path do %>
       <button class="btn-primary">
         記録をはじめる
       <i class="fas fa-arrow-right"></i>
       </button>
+      <% end %>
       <button class="btn-primary">
         　ログイン　
       <i class="fas fa-arrow-right"></i>
