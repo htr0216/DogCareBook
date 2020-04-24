@@ -1,3 +1,191 @@
-// Place all the styles related to the pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*=============================
+  共通レイアウト
+==============================*/
+.main {
+    /*position: absolute; */
+    text-align: center;
+    top: 64px;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    background-color: #f5f8fa;
+  }
+  
+  body {
+    font-family:'メイリオ', 'Meiryo','ＭＳ ゴシック','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+  }
+
+
+
+
+/*=============================
+  header
+==============================*/
+header {
+  height: 64px;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  /* background-color: gray; */
+  background-color: rgba(22, 22, 28, 0.4);
+  
+}
+
+.header-logo {
+    float: left;
+    padding-left: 20px;
+    color: white;
+    font-size: 22px;
+    line-height: 64px;
+  }
+  
+.header-logo a{
+    color: white;
+    font-size: 22px;
+  }
+  
+.header-menus {
+    float: right;
+    padding-right: 20px;
+  }
+  
+.header-menus li {
+    float: left;
+    line-height: 64px;
+    font-size: 13px;
+    color: white;
+    padding-left: 15px;
+  }
+  
+.header-menus a {
+    float: left;
+    font-size: 13px;
+    color: white;
+  }
+  
+.header-menus input[type="submit"] {
+    padding: 0 20px;
+    float: left;
+    line-height: 64px;
+    color: white;
+    margin: 0;
+    font-size: 20px;
+  }
+  
+/*=============================
+  top
+==============================*/
+.top-main {
+  padding: 300px 0 400px;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("IMG_1075.jpg");
+}
+
+.top-message h2{
+  font-size: 100px;
+  font-weight: 900;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  background-color:rgba(255,172,77,0.6);
+}
+
+.top-message p {
+  font-size: 30px;
+  opacity: 0.7;
+}
+
+/*=============================
+  concept-wrapper
+==============================*/
+.feature-section {
+  width: 100%;
+  padding: 150px 0;
+  height: auto;
+  background-color: rgba(253, 245, 230, 0.4);
+}
+
+.section {
+  display: black;
+}
+
+.feature-textbox {
+  text-align: center;
+}
+
+.feature-heading {
+  font-size: 40px;
+  letter-spacing: 3px;
+  font-weight: 900;
+  padding-bottom: 20px; 
+}
+
+.feature-subheading {
+  color: gray;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.feature-cards {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.feature-card {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 8px gray;
+  margin-top: 40px;
+}
+
+i {
+  margin-top: 25px;
+  color: #fda832;
+}
+
+.feature-card-heading {
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  border-bottom: 1px solid darkgray;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.feature-card-subheading {
+  font-size: 15px;
+  width: 300px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: gray;
+  padding: 5px 15px 45px 15px;
+  text-align: center;
+}
+
+.step-btn-group {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-primary {
+  background-color:rgba(255,172,77,0.6);
+  border: 3px solid white;
+  border-radius: 100px;
+  padding: 0 30px 30px 30px; 
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.btn-primary i {
+  color: #fff;
+}
+

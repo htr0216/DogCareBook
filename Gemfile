@@ -32,7 +32,6 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
 gem 'bootstrap-sass'
 
 # Reduces boot times through caching; required in config/boot.rb
@@ -55,6 +54,11 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'mysql2', '>= 0.4.4', '< 0.6.0'
+end
+
+group :production do
+  gem 'pg'
 end
 
 group :test do
@@ -70,4 +74,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # 追加分
 gem 'jquery-rails'
-gem 'font-awesome-rails'
+gem 'font-awesome-sass', '5.3.1'
