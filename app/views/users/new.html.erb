@@ -8,10 +8,10 @@
   </div>
   <ul class="header-menus">
     <li>
-      <a href="#">新規登録</a>
+      <%= link_to '新規登録', new_user_path, class: 'btn-block' %>
     </li>
     <li>
-      <a href="#">ログイン</a>
+      <%= link_to 'ログイン', login_path, class: 'btn-block' %>
     </li>
   </ul>
 </header>
@@ -43,7 +43,7 @@
           <div class="form-group">
           <%= f.submit "登録", class: 'btn-block' %>
         <% end %>
-        <%= link_to 'ログインはこちら', '#',class: 'text-white' %>
+        <%= link_to 'ログインはこちら', login_path, class: 'text-white' %>
           </div>
           
       </div>

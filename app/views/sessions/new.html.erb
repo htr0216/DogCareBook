@@ -1,2 +1,44 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<body>
+  
+<header>
+  <div class="header-logo">
+    <%= link_to root_path do %>
+    Dog Care Book
+    <% end %>
+  </div>
+  <ul class="header-menus">
+    <li>
+      <%= link_to '新規登録', new_user_path, class: 'btn-block' %>
+    </li>
+    <li>
+      <%= link_to 'ログイン', login_path, class: 'btn-block' %>
+    </li>
+  </ul>
+</header>
+
+
+<div class="users-new-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="users-new-container">
+        <h1 class="text-center">ログイン</h1>
+        <%= form_for :session, url: login_path do |f| %>
+          <div class="form-group">
+            <%= f.label :email, class: 'text-white' %>
+            <%= f.text_field :email, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :password, class: 'text-white' %>
+            <%= f.password_field :password, class: 'form-control' %>
+          </div>
+          
+          <div class="form-group">
+          <%= f.submit "ログイン", class: 'btn-block' %>
+        <% end %>
+          </div>
+          
+      </div>
+    </div>
+  </div>
+</div>
+</body>

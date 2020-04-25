@@ -12,7 +12,7 @@
       <%= link_to '新規登録', new_user_path, class: 'btn-block' %>
     </li>
     <li>
-      <%= link_to 'ログイン', new_user_path, class: 'btn-block' %>
+      <%= link_to 'ログイン', login_path, class: 'btn-block' %>
     </li>
   </ul>
 </header>
@@ -69,10 +69,12 @@
       <i class="fas fa-arrow-right"></i>
       </button>
       <% end %>
+      <%= link_to login_path do %>
       <button class="btn-primary">
         　ログイン　
       <i class="fas fa-arrow-right"></i>
       </button>
+      <% end %>
     </div>
     
 </section>
