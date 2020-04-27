@@ -2,11 +2,11 @@
     <div class="container">
         <div class="user">
             <div class="user-image">
-                <%# if @user.image? %>
-                    <%#= image_tag @user.image, :class => "mw50" %>
-                <%# else %>
+                <% if @user.image_name? %>
+                    <%= image_tag @user.image_name, :class => "mw50" %>
+                <% else %>
                     <%= image_tag "82214.jpg" %>
-                <%# end %>
+                <% end %>
             </div>
             
             <div class="user-informations">
@@ -20,7 +20,7 @@
                 </div>
                 <div  class="user-group">
                     <h3>愛犬のお名前</h3>
-                    <p><%#= @user.email %></p>
+                    <p><%= @user.nickname %></p>
                 </div>
                 <div  class="user-group">
                     <h3>愛犬のお誕生日</h3>
@@ -28,10 +28,10 @@
                 </div>
                 <div  class="user-group">
                     <h3>愛犬の性別</h3>
-                    <p><%#= @user.email %></p>
+                    <p><%= @user.sex %></p>
                 </div>
             
-                <%= link_to '編集', '#', class: 'text-white' %>
+                <%= link_to '編集', edit_user_path(current_user.id), class: 'text-white' %>
             </div>
         </div>
     </div>

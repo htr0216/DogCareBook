@@ -21,11 +21,37 @@ class UsersController < ApplicationController
   
   
   def edit
-    #@user = User.find_by(id: params[:id])
+    @user = User.find(params[:id])
+ 
+  end
+  
+  def update
+    @user = User.find(params[:id])
+    #binding.pry
+    if @user == current_user.id
+      if @user.update_attributes(update_params)
+        flash[:success] = 'ユーザー情報を編集しました。'
+        render :edit
+      else
+        flash.now[:danger] = 'ユーザー情報の編集に失敗しました。'
+        render :edit
+      end
+      
+    else
+      redirect_to root_url
+    end
+    #:image, :nickname, :sex, :age :name, :email
+ 
   end
   
   private
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation) #:image, :nickname, :sex, :age
   end
+  
+  def update_params
+    params.require(:user).permit(:name, :email, :image_name, :nickname, :sex)
+  end
+  
+  
 end

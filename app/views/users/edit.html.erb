@@ -1,0 +1,35 @@
+<div class="users-edit-wrapper">
+  <div class="container">
+    <div class="users-edit-container">
+    <h1 class="text-center">プロフィール編集</h1>
+    
+         
+        <%= form_for @user do |f| %>
+          <div class="form-group">
+            <%= f.label :image_name %>
+            <%= f.file_field :image_name %>
+          </div>
+          <div class="form-group"> 
+            <%= f.label :name, class: 'text-white' %>
+            <%= f.text_field :name, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :email, class: 'text-white' %>
+            <%= f.text_field :email, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :nickname, '愛犬のお名前' %>
+            <%= f.text_field :nickname, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :sex, '性別' %>
+            <%= f.text_field :sex, class: 'form-control' %>
+          </div>
+          
+          <div class="form-group">
+          <%= f.submit "プロフィール編集を完了する", class: 'btn-block' %>
+        <% end %>
+        </div>
+      </div>
+  </div>
+</div>     
