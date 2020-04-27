@@ -29,7 +29,7 @@
           <%= link_to 'サプリメント', '#', class: 'btn-block' %>
         </li>
         <li>
-          <%= link_to 'マイページ', '#', class: 'btn-block' %>
+          <%= link_to 'マイページ', user_path(current_user.id), class: 'btn-block' %>
         </li>
         <li>
           <%= link_to 'ログアウト', logout_path, method: :delete %>

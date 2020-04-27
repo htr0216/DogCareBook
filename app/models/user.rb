@@ -4,11 +4,11 @@ class User < ApplicationRecord
   validates :email, presence: true,  format: { with: VALID_EMAIL_REGEX }
   VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{8,32}+\z/i
   validates :password, presence: true, format: { with: VALID_PASSWORD_REGEX }
-  validates :nickname, presence: true, length: { maximum: 50 }
+  #validates :nickname, presence: true, length: { maximum: 50 }
   
   has_secure_password
   
-  mount_uploader :image, ImageUploader
+  #mount_uploader :image, ImageUploader
   
   
 end
