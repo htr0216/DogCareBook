@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_26_094228) do
+ActiveRecord::Schema.define(version: 2020_04_28_110946) do
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2020_04_26_094228) do
     t.string "sex"
     t.integer "age", limit: 1
     t.string "nickname"
+    t.date "birth_date"
   end
 
 end
