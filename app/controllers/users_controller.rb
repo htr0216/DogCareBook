@@ -21,25 +21,26 @@ class UsersController < ApplicationController
   
   
   def edit
-    @user = User.find(params[:id])
+    @user = current_user
  
   end
   
   def update
-    @user = User.find(params[:id])
+    @user = current_user
     #binding.pry
-    if @user == current_user.id
+    Rails.logger.debug { "user_params: #{user_params}" }
       if @user.update_attributes(update_params)
         flash[:success] = 'ユーザー情報を編集しました。'
-        render :edit
+        render :show
+        
       else
         flash.now[:danger] = 'ユーザー情報の編集に失敗しました。'
         render :edit
       end
       
-    else
-      redirect_to root_url
-    end
+    
+      #redirect_to root_url
+    
     #:image, :nickname, :sex, :age :name, :email
  
   end

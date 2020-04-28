@@ -22,7 +22,7 @@
     <div class="row">
       <div class="users-new-container">
         <h1 class="text-center">新規登録</h1>
-        <%= form_for @user do |f| %>
+        <%= form_for @user, url: user_path do |f| %>
           <div class="form-group">
             <%= f.label :name, class: 'text-white' %>
             <%= f.text_field :name, class: 'form-control' %>

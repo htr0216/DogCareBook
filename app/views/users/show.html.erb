@@ -3,7 +3,7 @@
         <div class="user">
             <div class="user-image">
                 <% if @user.image_name? %>
-                    <%= image_tag @user.image_name, :class => "mw50" %>
+                    <%= image_tag  @user.image_name.url, :class => "mw50" %>
                 <% else %>
                     <%= image_tag "82214.jpg" %>
                 <% end %>
