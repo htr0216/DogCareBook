@@ -28,7 +28,7 @@ class UsersController < ApplicationController
   def update
     @user = current_user
     #binding.pry
-    Rails.logger.debug { "user_params: #{user_params}" }
+    #Rails.logger.debug { "user_params: #{user_params}" }
       if @user.update_attributes(update_params)
         flash[:success] = 'ユーザー情報を編集しました。'
         render :show
@@ -41,7 +41,7 @@ class UsersController < ApplicationController
     
       #redirect_to root_url
     
-    #:image, :nickname, :sex, :age :name, :email
+    
  
   end
   
