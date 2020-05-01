@@ -26,7 +26,10 @@
           <%= link_to 'カレンダー', '#', class: 'btn-block' %>
         </li>
         <li>
-          <%= link_to 'サプリメント', new_topic_path, class: 'btn-block' %>
+          <%= link_to '投稿一覧', topics_path, class: 'btn-block' %>
+        </li>
+        <li>
+          <%= link_to '新規投稿', new_topic_path, class: 'btn-block' %>
         </li>
         <li>
           <%= link_to 'マイページ', user_path(current_user.id), class: 'btn-block' %>

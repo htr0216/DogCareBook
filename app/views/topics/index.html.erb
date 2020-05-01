@@ -1,0 +1,22 @@
+<div class="topic-index-wrapper">
+  <div class="container">
+    <%= @topics.each do |topic| %>
+      <div class="topic-row">
+        <div class="topic-index-single">
+          <h2 class="topic-author">
+            <%= topic.user.name %>
+          </h2>
+          <%= image_tag topic.image.url %>
+          
+            <i class="fa fa-heart like-btn topic-index-icon fa-2x"></i>
+            <i class="far fa-comment topic-index-icon fa-2x"></i>
+          
+          <p class="topic-text">
+            <%= topic.description %>
+          </p>
+          
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,20 +1,4 @@
 <body>
-  
-<!-- <header>
-  <div class="header-logo">
-    <%#= link_to root_path do %>
-    Dog Care Book
-    <%# end %>
-  </div>
-  <ul class="header-menus">
-    <li>
-      <%#= link_to '新規登録', new_user_path, class: 'btn-block' %>
-    </li>
-    <li>
-      <%#= link_to 'ログイン', login_path, class: 'btn-block' %>
-    </li>
-  </ul>
-</header> -->
 
 
 <div class="users-new-wrapper">
@@ -22,6 +6,11 @@
     <div class="row">
       <div class="users-new-container">
         <h1 class="text-center">新規登録</h1>
+        <% @user.errors.full_messages.each do |message| %>
+        <div class="form-error">
+          <%= message %>
+        </div>
+      <% end %>
         <%= form_for @user, url: user_path do |f| %>
           <div class="form-group">
             <%= f.label :name, class: 'text-white' %>

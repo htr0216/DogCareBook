@@ -68,13 +68,6 @@ header {
   height: 45px;
 }
 
-/* .users-new-wrapper {
-  width: 100vw;
-  height: 100vh;
-  background-position: center center;
-  background-attachment: fixed; 
-} */
-
 .users-new-container {
   padding-top: 220px;
   flex-direction: column;
@@ -124,6 +117,26 @@ header {
   font-size: 30px;
   font-weight: bold;
 }
+
+.user-topic {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #fda832;
+  margin: 200px 0 40px 0;
+}
+
+.user-topic-single {
+  width: 600px;
+  background-color: white;
+  padding: 50px 0;
+  border: 1px solid #e6ecf0;
+  border-radius: 3px;
+  box-shadow: 0 0 8px gray;
+  margin: 50px auto;
+  
+}
+
 
 /*=============================
   edit.html.erb

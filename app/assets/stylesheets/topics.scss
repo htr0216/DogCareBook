@@ -1,11 +1,52 @@
 // Place all the styles related to the topics controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.row {
+
+.topic-row {
   padding-top: 150px;
 }
 
 .form-error {
   color: #ff4d75;
   text-align: center;
+}
+
+/*=============================
+  index.html.erb
+==============================*/
+.topic-index-wrapper {
+  padding-top: 70px;
+}
+
+.topic-index-single {
+  width: 600px;
+  background-color: white;
+  padding: 50px 0;
+  margin-top: 50px;
+  border: 1px solid #e6ecf0;
+  border-radius: 3px;
+  box-shadow: 0 0 8px gray;
+  margin: 0 auto;
+}
+
+.topic-author {
+  padding-right: 0px;
+  padding-left: 20px;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+img {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.topic-index-icon {
+  margin-left: 20px;
+}
+
+.topic-text {
+  padding-right: 20px;
+  padding-left: 20px;
 }
