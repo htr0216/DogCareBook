@@ -34,6 +34,7 @@
   padding-left: 20px;
   font-weight: bold;
   font-size: 30px;
+  float: left;
 }
 
 img {
@@ -49,4 +50,12 @@ img {
 .topic-text {
   padding-right: 20px;
   padding-left: 20px;
+}
+
+/*=============================
+  show.html.erb
+==============================*/
+.topic-time {
+  color: #8899a6;
+  float: right;
 }
