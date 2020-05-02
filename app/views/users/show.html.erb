@@ -48,7 +48,7 @@
                     <%= topic.user.name %>
                 </h2>
                 <p class="topic-time">
-                    <%= topic.created_at %>
+                    <%= topic.created_at.to_s(:datetime_jp) %>
                 </p>
                 
                 <%= image_tag topic.image.url %>
