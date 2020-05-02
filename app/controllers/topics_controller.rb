@@ -20,7 +20,7 @@ class TopicsController < ApplicationController
   
   def destroy
     #binding.pry
-    @topic = current_user.topics.find(params[:id])
+    @topic = Topic.find_by(id: params[:id])
     @topic.destroy
     redirect_to topics_path
   end
