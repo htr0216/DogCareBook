@@ -22,7 +22,6 @@ class UsersController < ApplicationController
   
   def edit
     @user = current_user
- 
   end
   
   def update
@@ -37,12 +36,6 @@ class UsersController < ApplicationController
         flash.now[:danger] = 'ユーザー情報の編集に失敗しました。'
         render :edit
       end
-      
-    
-      #redirect_to root_url
-    
-    
- 
   end
   
   private
