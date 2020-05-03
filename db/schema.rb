@@ -35,7 +35,6 @@ ActiveRecord::Schema.define(version: 2020_05_02_102321) do
     t.string "password_digest"
     t.string "image_name"
     t.string "sex"
-    t.integer "age", limit: 1
     t.string "nickname"
     t.date "birth_date"
   end
