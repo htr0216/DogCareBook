@@ -3,27 +3,27 @@
     <div class="topic-row">
       <h1 class="text-center">投稿する</h1>
       <%= form_for @topic do |f| %>
-      <div class="form-group">
-        <%= f.label :image %>
-        <%= f.file_field :image%>
-      </div>
-      
-      <% @topic.errors.full_messages.each do |message| %>
-        <div class="form-error">
-          <%= message %>
-        </div>
-      <% end %>
-      
-      <div class="form-group">
-        <%#= f.label :description %>
-        <%= f.text_area :description, :size => "45x10", class: 'form-control' %>
-      </div>
-      
-      <% if logged_in? %>
         <div class="form-group">
-          <%= f.submit '投稿', class: 'btn-block' %>
+          <%= f.label :image %>
+          <%= f.file_field :image%>
         </div>
-      <% end %>
+      
+        <% @topic.errors.full_messages.each do |message| %>
+          <div class="form-error">
+            <%= message %>
+          </div>
+        <% end %>
+      
+        <div class="form-group">
+          <%#= f.label :description %>
+          <%= f.text_area :description, :size => "45x10", class: 'form-control' %>
+        </div>
+      
+        <% if logged_in? %>
+          <div class="form-group">
+            <%= f.submit '投稿', class: 'btn-block' %>
+          </div>
+        <% end %>
       <% end %>
     </div>
   </div>

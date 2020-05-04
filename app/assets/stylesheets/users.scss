@@ -5,8 +5,6 @@ body {
   background-color: rgba(253, 245, 230, 0.5);
   font-family:'メイリオ', 'Meiryo','ＭＳ ゴシック','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
   }
-  
-  
 /*=============================
   new.html.erb
 ==============================*/
@@ -89,7 +87,6 @@ header {
 /*=============================
   show.html.erb
 ==============================*/
-
 .user-image img {
   width: 450px;
   height: 400px;
@@ -159,7 +156,6 @@ header {
   border-radius: 3px;
   box-shadow: 0 0 8px gray;
   margin: 50px auto;
-  
 }
 
 .post-menus {
@@ -170,9 +166,8 @@ header {
   color: #8899a6;
   text-decoration: underline;
   font-size: 14px;
+  margin-right: 1rem;
 }
-
-
 /*=============================
   edit.html.erb
 ==============================*/

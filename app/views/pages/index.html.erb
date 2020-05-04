@@ -1,36 +1,19 @@
 <body>
-  
-<!-- <header>
-  <div class="header-logo">
-    <%#= link_to root_path do %>
-    Dog Care Book
-    <%# end %>
-  </div>
-  <ul class="header-menus">
-    <li>
-      <%#= link_to '新規登録', new_user_path, class: 'btn-block' %>
-    </li>
-    <li>
-      <%#= link_to 'ログイン', login_path, class: 'btn-block' %>
-    </li>
-  </ul>
-</header> -->
 
-<div class="main top-main">
-  <!-- <img src="IMG_1075.jpg" alt="犬の写真">  -->
-  <div class="top-message">
-    <h2>Dog Care Book</h2>
-    <p>大切な家族のために、記録してみませんか？</p>
+  <div class="main top-main">
+    <div class="top-message">
+      <h2>Dog Care Book</h2>
+      <p>大切な家族のために、記録してみませんか？</p>
+    </div>
   </div>
-</div>
 
-<section class="feature-section">
-  <div class="feature-textbox">
+  <section class="feature-section">
+    <div class="feature-textbox">
       <h2 class="feature-heading">DogCareBookで出来ること</h2>
       <h3 class="feature-subheading md-2">
         愛犬の為に記録しよう。薬では体の負担が心配。ここで解決できます。
       </h3>
-  </div>
+    </div>
     
     <div class="feature-cards">
       <div class="feature-card">
@@ -63,21 +46,19 @@
     
     <div class="step-btn-group">
       <%= link_to new_user_path do %>
-      <button class="btn-primary">
-        記録をはじめる
-      <i class="fas fa-arrow-right"></i>
-      </button>
+        <button class="btn-primary">
+          記録をはじめる
+          <i class="fas fa-arrow-right"></i>
+        </button>
       <% end %>
       <%= link_to login_path do %>
-      <button class="btn-primary">
-        　ログイン　
-      <i class="fas fa-arrow-right"></i>
-      </button>
+        <button class="btn-primary">
+          　ログイン　
+          <i class="fas fa-arrow-right"></i>
+        </button>
       <% end %>
     </div>
     
-</section>
+  </section>
 
-  
-</div>
 </body>
