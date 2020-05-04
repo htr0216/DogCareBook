@@ -93,16 +93,18 @@ header {
   border-radius: 30%;
   box-shadow: 0 2px 6px #c1ced7;
   object-fit: cover;
-  /* margin-left: 100px; */
   float: left;
+  margin-top: 150px;
 }
 
 .user-informations {
   display: block;
   display: flex;
   flex-direction: column;
-  text-align: center;
+  text-align: left;
+  float: left;
   margin-top: 200px;
+  margin-left: 50px;
 } 
 
 .user-group {
