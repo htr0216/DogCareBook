@@ -38,11 +38,11 @@
         </div>
         
             <ul class="user-tabs">
-                <li class="active"><%= link_to ("#{@user.name}の投稿"), user_path(current_user.id) %></li>
-                <li><%= link_to 'お気に入り', favorites_index_path %></li>
+                <li><%= link_to ("#{@user.name}の投稿"), user_path(current_user.id) %></li>
+                <li class="active"><%= link_to 'お気に入り', favorites_index_path %></li>
             </ul>
         
-            <% @user.topics.each do |topic| %>
+            <% @favorite_topics.each do |topic| %>
                 <div class="user-topic-single">
                     <h2 class="topic-author">
                         <%= topic.user.name %>
@@ -58,10 +58,6 @@
                     </p>
                     <i class="fa fa-heart like-btn topic-index-icon fa-2x"></i>
                     <i class="far fa-comment topic-index-icon fa-2x"></i>
-                    
-                    <div class="post-menus">
-                    <%= link_to '削除', topic_path(topic), method: :delete  %>
-                    </div>
                 </div>
             <% end %>
     </div>

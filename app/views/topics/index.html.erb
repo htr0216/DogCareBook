@@ -14,8 +14,17 @@
           <p class="topic-text">
             <%= topic.description %>
           </p>
-          
-          <i class="fa fa-heart like-btn topic-index-icon fa-2x"></i>
+
+          <% if !topic.favorites_id.include?(current_user) %>
+            <%= link_to favorites_path(topic_id: topic.id), method: :post do %>
+              <i class="fa fa-heart like-btn topic-index-icon fa-2x"></i>
+            <% end %>
+          <% else %>
+            <%= link_to favorites_path(topic_id: topic.id), method: :delete do %>
+              <i class="fa fa-heart unlike-btn topic-index-icon fa-2x"></i>
+            <% end %>
+          <% end %>
+
           <i class="far fa-comment topic-index-icon fa-2x"></i>
         </div>
       </div>
