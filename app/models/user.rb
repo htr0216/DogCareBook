@@ -27,4 +27,6 @@ class User < ApplicationRecord
   mount_uploader :image_name, ImageUploader
   
   has_many :topics
+  has_many :favorites
+  has_many :favorite_topics, through: :favorites, source: "topic"
 end
