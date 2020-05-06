@@ -3,7 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .topic-row {
-  padding-top: 150px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .form-error {
@@ -18,6 +19,13 @@
   padding-top: 70px;
 }
 
+.topic-list {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: #fda832;
+  margin-top: 50px;
+}
 .topic-index-single {
   width: 600px;
   background-color: white;
@@ -50,6 +58,7 @@ img {
 .topic-text {
   padding-right: 20px;
   padding-left: 20px;
+  padding-bottom: 20px;
 }
 
 .like-btn {
@@ -75,4 +84,22 @@ img {
   color: #8899a6;
   float: right;
   margin-right: 1rem;
+}
+
+.topic-comment {
+  border-top: 1px solid #c9caca;
+  margin-top: 20px;
+}
+
+.user-comment {
+  color: #fda832;
+  font-weight: bold;
+  float: left;
+  margin-top: 32px;
+  margin-left: 10px;
+}
+
+.topic-comment-icon {
+  float: left;
+  margin-left: 15px;
 }

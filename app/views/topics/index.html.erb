@@ -1,5 +1,6 @@
 <div class="topic-index-wrapper">
   <div class="container">
+  <h2 class="topic-list">投稿一覧</h2>
     <% @topics.each do |topic| %>
       <div class="topic-row">
         <div class="topic-index-single">
@@ -29,7 +30,7 @@
           <i class="far fa-comment topic-index-icon fa-2x"></i>
 
           <div class="post-menus">
-            <%= link_to 'コメント一覧', '#' %>
+            <%= link_to 'コメント一覧', topic_path(topic) %>
           </div>
         </div>
       </div>

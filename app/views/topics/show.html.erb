@@ -1,0 +1,26 @@
+<div class="topic-index-wrapper">
+  <div class="container">
+  <h2 class="topic-list">コメント一覧</h2>
+    <div class="topic-row">
+      <div class="topic-index-single">
+            <h2 class="topic-author">
+            <%= @topic.user.name %>
+          </h2>
+          <p class="topic-time">
+            <%= I18n.l(@topic.created_at, format: :long) %>
+          </p>
+          <%= image_tag @topic.image.url %>
+          
+          <p class="topic-text">
+            <%= @topic.description %>
+          </p>
+          <div class="cf">
+            <div class="topic-comment">
+              <i class="far fa-comment topic-comment-icon fa-2x"></i>
+              <%= link_to 'コメント', '#', class: 'user-comment' %>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -2,6 +2,11 @@ class TopicsController < ApplicationController
   def index
     @topics = Topic.eager_load(:user).order(created_at: :desc)
   end
+
+  def show
+    @topic = Topic.find_by(id: params[:id])
+    @user = @topic.user
+  end
   
   def new
     @topic = Topic.new
