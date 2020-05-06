@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   def show
-    @user = User.find(current_user.id)
+    @user = current_user
+    @topics = @user.topics.order(created_at: :desc)
   end
   
   def new
