@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   
   resource :user
   resources :topics
+  resources :comments
   
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
