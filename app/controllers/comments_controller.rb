@@ -19,4 +19,12 @@ class CommentsController < ApplicationController
       render :new
     end
   end
+
+  def destroy
+    @comment = Comment.find_by(
+      user_id: current_user.id, 
+      topic_id: params[:topic_id])
+    @comment.destroy
+    redirect_to topics_path(@topic), info: "コメントを削除しました"
+  end
 end
