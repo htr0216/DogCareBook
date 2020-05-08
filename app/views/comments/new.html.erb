@@ -1,15 +1,16 @@
 <div class="comment-new-wrapper">
   <div class="container">
     <div class="comment-row">
+      <% @comment.errors.full_messages.each do |message| %>
+        <div class="form-error">
+          <%= message %>
+        </div>
+      <% end %>
       <h2 class="text-center">コメント入力</h2>
-      <%= form_for @comment do |f| %>
-        <% @comment.errors.full_messages.each do |message| %>
-          <div class="form-error">
-            <%= message %>
-          </div>
-        <% end %>
+      <%= form_for [@topic, @comment] do |f| %>
         <div class="form-group">
           <%= f.text_area :content, :size => "45x10", class: 'form-control'%>
+          <%= f.hidden_field :topic_id, value: params[:topic_id] %>
         </div>
         <div class="form-group">
           <%= f.submit 'コメントする', class: 'btn-block' %>

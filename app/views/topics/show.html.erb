@@ -1,25 +1,32 @@
 <div class="topic-index-wrapper">
   <div class="container">
-  <h2 class="topic-list">コメント一覧</h2>
+    <h1 class="topic-list">コメント一覧</h1>
     <div class="topic-row">
       <div class="topic-index-single">
-            <h2 class="topic-author">
-            <%= @topic.user.name %>
-          </h2>
-          <p class="topic-time">
-            <%= I18n.l(@topic.created_at, format: :long) %>
-          </p>
-          <%= image_tag @topic.image.url %>
+        <h2 class="topic-author">
+          <%= @topic.user.name %>
+        </h2>
+        <p class="topic-time">
+          <%= I18n.l(@topic.created_at, format: :long) %>
+        </p>
+        <%= image_tag @topic.image.url %>
           
-          <p class="topic-text">
-            <%= @topic.description %>
-          </p>
-          <div class="cf">
-            <div class="topic-comment">
-              <i class="far fa-comment topic-comment-icon fa-2x"></i>
-              <%= link_to 'コメント', new_comment_path, class: 'user-comment' %>
-            </div>
+        <p class="topic-text">
+          <%= @topic.description %>
+        </p>
+        <div class="cf">
+          <div class="topic-comment">
+            <i class="far fa-comment topic-comment-icon fa-2x"></i>
+            <%= link_to 'コメント', new_topic_comment_path(@topic), class: 'user-comment' %>
           </div>
+        </div>
+        <% @comments.each do |comment| %>
+          <p class="comment-text">
+            <%= comment.user.name %>
+            <%= comment.content%>
+            <%= I18n.l(comment.created_at, format: :long) %>
+          </p>
+        <% end %>
       </div>
     </div>
   </div>
