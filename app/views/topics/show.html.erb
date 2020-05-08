@@ -20,13 +20,22 @@
             <%= link_to 'コメント', new_topic_comment_path(@topic), class: 'user-comment' %>
           </div>
         </div>
-        <% @comments.each do |comment| %>
-          <p class="comment-text">
-            <%= comment.user.name %>
-            <%= comment.content%>
-            <%= I18n.l(comment.created_at, format: :long) %>
-          </p>
-        <% end %>
+        <div class="content">
+          <% @comments.each do |comment| %>
+            <div class="comment-text">
+              <h3 class="comment-name"><%= comment.user.name %><br></h3>
+              <div class="post-menus">
+                <%= link_to '削除', '#'%>
+              </div>
+              <ul>
+                <li>
+                  <%= comment.content%><br>
+                  <span><%= I18n.l(comment.created_at, format: :long) %></span>
+                </li>
+              </ul>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>

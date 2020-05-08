@@ -56,11 +56,11 @@
           <%= topic.description %>
         </p>
         <% if !topic.favorite_users.include?(current_user) %>
-          <%= link_to favorites_path(topic_id: topic.id), method: :post do %>
+          <%= link_to topic_favorites_path(topic_id: topic.id), method: :post do %>
             <i class="fa fa-heart like-btn topic-index-icon fa-2x"></i>
           <% end %>
         <% else %>
-          <%= link_to favorites_path(topic_id: topic.id), method: :delete do %>
+          <%= link_to topic_favorites_path(topic_id: topic.id), method: :delete do %>
             <i class="fa fa-heart unlike-btn topic-index-icon fa-2x"></i>
           <% end %>
         <% end %>

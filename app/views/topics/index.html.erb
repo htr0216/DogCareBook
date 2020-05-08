@@ -30,6 +30,7 @@
           <%= link_to new_topic_comment_path(topic) do%>
             <i class="far fa-comment topic-index-icon fa-2x"></i>
           <% end %>
+          <%= topic.comment_users.count %>
 
           <div class="post-menus">
             <%= link_to 'コメント一覧', topic_path(topic) %>
