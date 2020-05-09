@@ -1,6 +1,6 @@
 <div class="topic-index-wrapper">
   <div class="container">
-  <h2 class="topic-list">投稿一覧</h2>
+    <h1 class="topic-list">投稿一覧</h1>
     <% @topics.each do |topic| %>
       <div class="topic-row">
         <div class="topic-index-single">
@@ -27,14 +27,10 @@
           <% end %>
           <%= topic.favorite_users.count %>
           
-          <%= link_to new_topic_comment_path(topic) do%>
+          <%= link_to topic_path(topic) do%>
             <i class="far fa-comment topic-index-icon fa-2x"></i>
           <% end %>
           <%= topic.comment_users.count %>
-
-          <div class="post-menus">
-            <%= link_to 'コメント一覧', topic_path(topic) %>
-          </div>
         </div>
       </div>
     <% end %>
