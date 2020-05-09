@@ -1,4 +1,9 @@
 class CommentsController < ApplicationController
+  def index
+    @user = current_user
+    @comment_topics = current_user.comment_topics
+  end
+
   def new
     @topic = Topic.find(params[:topic_id])
     @comment = @topic.comments.build
