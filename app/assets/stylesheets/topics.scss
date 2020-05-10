@@ -1,12 +1,10 @@
 // Place all the styles related to the topics controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
 .topic-row {
   padding-top: 50px;
   padding-bottom: 50px;
 }
-
 .topic-new {
   margin-top: 120px;
 }
@@ -15,7 +13,6 @@
   color: #ff4d75;
   text-align: center;
 }
-
 /*=============================
   index.html.erb
 ==============================*/
@@ -30,6 +27,7 @@
   color: #fda832;
   margin-top: 50px;
 }
+
 .topic-index-single {
   width: 600px;
   background-color: white;
@@ -81,7 +79,6 @@ img {
     color: #e54747;
     margin-left: 20px;
 }
-
 /*=============================
   show.html.erb
 ==============================*/
@@ -137,4 +134,28 @@ img {
 .comment-text ul li span {
   font-size: 13px;
   color: #808080; 
+}
+
+/*=============================
+  new.html.erb
+==============================*/
+.new-form {
+  margin-top: 45px;
+  margin-bottom: 40px;
+}
+
+.new-block {
+  width: 300px;
+  height: 40px;
+  font-size: 20px;
+  color: #919191;
+  margin: 0 auto;
+  display: block;
+  border-radius: 5%;
+  border: 3px solid #fec87d;
+}
+
+.new-block:hover {
+  border: 3px solid #fda832;
+  background-color: #faf0e6;
 }

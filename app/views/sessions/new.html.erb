@@ -6,6 +6,7 @@
         <div class="users-new-container">
           <h1 class="text-center">ログイン</h1>
           <%= form_for :session, url: login_path do |f| %>
+          <div class="new-form">
             <div class="form-group">
               <%= f.label :email, class: 'text-white' %>
               <%= f.text_field :email, class: 'form-control' %>
@@ -14,9 +15,9 @@
               <%= f.label :password, class: 'text-white' %>
               <%= f.password_field :password, class: 'form-control' %>
             </div>
-          
+          </div>
             <div class="form-group">
-              <%= f.submit "ログイン", class: 'btn-block' %>
+              <%= f.submit "ログイン", class: 'new-block' %>
             </div>
           <% end %>
           
