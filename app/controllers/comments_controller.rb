@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   def index
     @user = current_user
-    @comment_topics = current_user.comment_topics.distinct
+    @comment_topics = current_user.comment_topics.distinct.order(created_at: :desc)
   end
 
   def new

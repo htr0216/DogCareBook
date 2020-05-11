@@ -31,7 +31,7 @@
               </div>
               <ul>
                 <li>
-                  <%= comment.content%><br>
+                  <%= simple_format(comment.content) %><br>
                   <span><%= I18n.l(comment.created_at, format: :long) %></span>
                 </li>
               </ul>
