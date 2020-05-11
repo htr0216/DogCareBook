@@ -152,10 +152,14 @@ img {
   margin: 0 auto;
   display: block;
   border-radius: 5%;
-  border: 3px solid #fec87d;
+  background-color: #fdbd62;
+  border-bottom: 4px solid #fda832;
+  border-radius: 3px;
 }
 
-.new-block:hover {
-  border: 3px solid #fda832;
-  background-color: #faf0e6;
+.new-block:active {
+  -webkit-transform: translateY(4px);
+  border-bottom: none;
+  transform: translateY(4px);
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
 }
