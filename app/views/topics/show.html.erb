@@ -12,7 +12,7 @@
         <%= image_tag @topic.image.url %>
           
         <p class="topic-text">
-          <%= @topic.description %>
+          <%= simple_format(@topic.description) %>
         </p>
         <div class="cf">
           <div class="topic-comment">
