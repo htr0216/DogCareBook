@@ -25,16 +25,12 @@ class UsersController < ApplicationController
   
   def update
     @user = current_user
-    #binding.pry
-    #Rails.logger.debug { "user_params: #{user_params}" }
-      if @user.update_attributes(update_params)
-        flash[:success] = 'ユーザー情報を編集しました。'
-        render :show
-        
-      else
-        flash.now[:danger] = 'ユーザー情報の編集に失敗しました。'
-        render :edit
-      end
+    if @user.update_attributes(update_params)
+      redirect_to user_path, success: 'ユーザー情報を編集しました。'
+    else
+      flash.now[:danger] = 'ユーザー情報の編集に失敗しました。'
+      render :edit
+    end
   end
   
   private
