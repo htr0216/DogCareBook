@@ -1,9 +1,4 @@
 class FavoritesController < ApplicationController
-  def index
-    @user = current_user
-    @favorite_topics = current_user.favorite_topics.order(created_at: :desc)
-  end
-
   def create
     favorite = Favorite.new(
       user_id: current_user.id,

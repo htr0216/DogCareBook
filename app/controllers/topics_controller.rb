@@ -1,11 +1,28 @@
 class TopicsController < ApplicationController
   def index
     @user = current_user
-    @topics = Topic.eager_load(:user).order(created_at: :desc)
-    type = params[:type]
-    if type == "user"
-      @topics = Topic.where(user_id: @user.id)
+    @type = params[:type]
+
+    if @type == "user"
+      @topics = current_user.topics
+
+    elsif @type == "favorite"
+      # もし type が「favorite」だったら
+      # @topics にログイン中ユーザがお気に入りしているトピックに絞り込んだものを入れる。
+      @topics = current_user.favorite_topics
+
+    elsif @type == "comment"
+      # もし type が「commented」だったら
+      # @topics にログイン中ユーザがコメントしたトピックに絞り込んだものを入れる。
+      @topics = current_user.comment_topics.distinct
+
+    else
+      # もし type が上のどれでもなかったら
+      # @topics はそのまま。
+      @topics = Topic.eager_load(:user)
     end
+
+    @topics = @topics.order(created_at: :desc)
   end
 
   def show
@@ -13,11 +30,11 @@ class TopicsController < ApplicationController
     @user = @topic.user
     @comments = @topic.comments
   end
-  
+
   def new
     @topic = Topic.new
   end
-  
+
   def create
     @topic = current_user.topics.new(topic_params)
     
@@ -28,15 +45,16 @@ class TopicsController < ApplicationController
       render :new
     end
   end
-  
+
   def destroy
     #binding.pry
     @topic = current_user.topics.find(params[:id])
     @topic.destroy
     redirect_to topics_path
   end
-  
+
   private
+
   def topic_params
     params.require(:topic).permit(:image, :description)
   end

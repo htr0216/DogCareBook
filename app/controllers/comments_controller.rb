@@ -1,9 +1,4 @@
 class CommentsController < ApplicationController
-  def index
-    @user = current_user
-    @comment_topics = current_user.comment_topics.distinct.order(created_at: :desc)
-  end
-
   def new
     @topic = Topic.find(params[:topic_id])
     @comment = @topic.comments.build
@@ -16,7 +11,7 @@ class CommentsController < ApplicationController
       content: params[:comment][:content],
       topic_id: params[:comment][:topic_id]
     )
-  
+
     if @comment.save
       redirect_to topic_path(@topic), success: 'コメントしました'
     else
@@ -28,7 +23,7 @@ class CommentsController < ApplicationController
   def destroy
     @comment = Comment.find_by(
       id: params[:id],
-      user_id: current_user.id, 
+      user_id: current_user.id,
       topic_id: params[:topic_id]
     )
     @comment.destroy
