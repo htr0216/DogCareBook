@@ -175,12 +175,17 @@ i {
 }
 
 .btn-primary {
-  background-color:rgba(255,172,77,0.6);
-  border: 3px solid white;
+  background-color:#fda832;
+  border-bottom: 4px solid #fd9402;
   border-radius: 100px;
-  padding: 0 30px 30px 30px; 
+  padding: 30px 30px 30px 30px; 
   font-size: 25px;
   cursor: pointer;
+}
+
+.btn-primary:active {
+  -webkit-transform: translateY(4px);
+  background-color: #fdbd62;
 }
 
 .btn-primary i {

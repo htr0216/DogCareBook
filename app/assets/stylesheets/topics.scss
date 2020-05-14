@@ -21,11 +21,16 @@
 }
 
 .topic-list {
+  width: 250px;
   font-size: 30px;
   font-weight: bold;
   text-align: center;
   color: #fda832;
   margin-top: 50px;
+  margin: 0 auto;
+  padding: 30px 25px;
+  border: 2px solid #fd9f1c;
+  border-radius: 25px;
 }
 
 .topic-index-single {
@@ -35,7 +40,7 @@
   margin-top: 50px;
   border: 1px solid #e6ecf0;
   border-radius: 3px;
-  box-shadow: 0 0 8px gray;
+  box-shadow: 0 2px 6px #c1ced7;
   margin: 0 auto;
 }
 
@@ -73,11 +78,11 @@ img {
 }
 
   .unlike-btn {
-    width: 25px;
-    height: 30px;
-    font-size: 25px;
-    color: #e54747;
-    margin-left: 20px;
+  width: 25px;
+  height: 30px;
+  font-size: 25px;
+  color: #e54747;
+  margin-left: 20px;
 }
 /*=============================
   show.html.erb
@@ -152,9 +157,10 @@ img {
   margin: 0 auto;
   display: block;
   border-radius: 5%;
-  background-color: #fdbd62;
-  border-bottom: 4px solid #fda832;
+  background-color: #fda832;
+  border-bottom: 4px solid #fd9402;
   border-radius: 3px;
+  color: #fff;
 }
 
 .new-block:active {
@@ -162,4 +168,5 @@ img {
   border-bottom: none;
   transform: translateY(4px);
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  background-color: #fdbd62;
 }

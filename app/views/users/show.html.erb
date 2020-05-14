@@ -36,13 +36,8 @@
         </div>
       </div>
     </div>
-        
-    <ul class="user-tabs">
-      <li class="active"><%= link_to ("#{@user.name}の投稿"), user_path(current_user.id) %></li>
-      <li><%= link_to 'お気に入り', favorites_index_path %></li>
-      <li><%= link_to 'コメントした投稿', topic_comments_path(:id) %></li>
-    </ul>
     
+    <h1 class="topic-list">自分の投稿</h1>
     <% @topics.each do |topic| %>
       <div class="user-topic-single">
         <h2 class="topic-author">

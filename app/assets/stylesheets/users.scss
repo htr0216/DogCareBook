@@ -115,35 +115,61 @@ header {
 
 .user-tabs {
   margin-top: 40px;
-  background-color: white;
-  overflow: hidden;
-  box-shadow: 0 2px 6px #c1ced7;
+  padding: 0;
+  top: 50px;
+  position: relative; 
+  float: left;
+  position:sticky;
 }
 
 .user-tabs li {
-  float: left;
+  width: 150px;
+  font-size: 14px;
+  border-left: solid 8px orange;/*左側の線*/
+  background: whitesmoke;/*背景色*/
+  margin-bottom: 5px;/*下のバーとの余白*/
+  line-height: 1.5;
+  border-radius: 0 15px 15px 0;/*右側の角だけ丸く*/
+  padding: 0.5em;
+  list-style-type: none!important;
 }
+  
+/* .user-tabs {
+  width: 200px;
+  margin-top: 40px;
+  left: 0;
+  /* background-color: white; */
+  /*overflow: hidden;
+  box-shadow: 0 2px 6px #c1ced7;
+  float: left;
+  display: inline-block;
+  background-color:rgba(255,172,77,0.6);
+} */
+
+/* .user-tabs li {
+  float: left;
+} */
 
 .user-tabs li.active {
-  border-bottom: 2px solid #3ecdc6;
-}
+  background-color:rgba(255,172,77,0.6);
+} 
 
 .user-tabs li.active a {
-  color: #57575f;
+  color: black;
 }
 
 .user-tabs a {
   display: inline-block;
-  padding: 16px 30px;
+  /* padding: 16px 30px; */
   color: #afb6bf;
-}
+} 
 
 .user-topic {
   text-align: center;
   font-size: 30px;
   font-weight: bold;
   color: #fda832;
-  margin: 200px 0 40px 0;
+  /* margin: 200px 0 40px 0; */
 }
 
 .user-topic-single {
@@ -152,7 +178,7 @@ header {
   padding: 50px 0;
   border: 1px solid #e6ecf0;
   border-radius: 3px;
-  box-shadow: 0 0 8px gray;
+  box-shadow: 0 2px 6px #c1ced7;
   margin: 50px auto;
 }
 

@@ -1,6 +1,11 @@
 class TopicsController < ApplicationController
   def index
+    @user = current_user
     @topics = Topic.eager_load(:user).order(created_at: :desc)
+    type = params[:type]
+    if type == "user"
+      @topics = Topic.where(user_id: @user.id)
+    end
   end
 
   def show
