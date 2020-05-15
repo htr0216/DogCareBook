@@ -14,7 +14,7 @@
         愛犬の為に記録しよう。薬では体の負担が心配。ここで解決できます。
       </h3>
     </div>
-    
+
     <div class="feature-cards">
       <div class="feature-card">
         <i class="fas fa-pen-square fa-2x"></i>
@@ -45,7 +45,9 @@
         </p>
       </div>
     </div>
-    
+
+    <% if logged_in? %>
+    <% else %>
     <div class="step-btn-group">
       <%= link_to new_user_path do %>
         <button class="btn-primary">
@@ -58,7 +60,8 @@
         </button>
       <% end %>
     </div>
-    
+    <% end %>
+
   </section>
 
 </body>
