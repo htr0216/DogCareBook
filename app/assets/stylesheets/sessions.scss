@@ -5,7 +5,6 @@ body {
   background-color: rgba(253, 245, 230, 0.5);
   font-family:'メイリオ', 'Meiryo','ＭＳ ゴシック','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
   }
-  
 /*=============================
   new.html.erb
 ==============================*/
@@ -26,17 +25,17 @@ header {
   font-size: 22px;
   line-height: 64px;
 }
-  
+
 .header-logo a{
   color: white;
   font-size: 22px;
 }
-  
+
 .header-menus {
   float: right;
   padding-right: 20px;
 }
-  
+
 .header-menus li {
   float: left;
   line-height: 64px;

@@ -4,7 +4,7 @@
 body {
   background-color: rgba(253, 245, 230, 0.5);
   font-family:'メイリオ', 'Meiryo','ＭＳ ゴシック','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
-  }
+}
 /*=============================
   new.html.erb
 ==============================*/
@@ -83,14 +83,19 @@ header {
 /*=============================
   show.html.erb
 ==============================*/
+.user {
+  border: 3px dashed  #fda832;
+  margin: 120px 0;
+  padding: 50px;
+  border-radius:15px;
+}
+
 .user-image img {
   width: 450px;
-  height: 400px;
   border-radius: 30%;
-  box-shadow: 0 2px 6px #c1ced7;
+  box-shadow: 0 0 6px 3px #fda832;
   object-fit: cover;
   float: left;
-  margin-top: 150px;
 }
 
 .user-informations {
@@ -99,9 +104,8 @@ header {
   flex-direction: column;
   text-align: left;
   float: left;
-  margin-top: 200px;
   margin-left: 50px;
-} 
+}
 
 .user-group {
   margin-bottom: 20px;
@@ -111,13 +115,15 @@ header {
   color: #fda832;
   font-size: 30px;
   font-weight: bold;
+  border: 3px outset  #fda832;
+  margin: 5px 0;
 }
 
 .user-tabs {
   margin-top: 40px;
   padding: 0;
   top: 50px;
-  position: relative; 
+  position: relative;
   float: left;
   position:sticky;
 }
@@ -133,26 +139,10 @@ header {
   padding: 0.5em;
   list-style-type: none!important;
 }
-  
-/* .user-tabs {
-  width: 200px;
-  margin-top: 40px;
-  left: 0;
-  /* background-color: white; */
-  /*overflow: hidden;
-  box-shadow: 0 2px 6px #c1ced7;
-  float: left;
-  display: inline-block;
-  background-color:rgba(255,172,77,0.6);
-} */
-
-/* .user-tabs li {
-  float: left;
-} */
 
 .user-tabs li.active {
   background-color:rgba(255,172,77,0.6);
-} 
+}
 
 .user-tabs li.active a {
   color: black;
@@ -160,16 +150,14 @@ header {
 
 .user-tabs a {
   display: inline-block;
-  /* padding: 16px 30px; */
   color: #afb6bf;
-} 
+}
 
 .user-topic {
   text-align: center;
   font-size: 30px;
   font-weight: bold;
   color: #fda832;
-  /* margin: 200px 0 40px 0; */
 }
 
 .user-topic-single {

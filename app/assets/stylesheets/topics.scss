@@ -21,7 +21,7 @@
 }
 
 .topic-list {
-  width: 250px;
+  width: 600px;
   font-size: 30px;
   font-weight: bold;
   text-align: center;
@@ -73,7 +73,7 @@ img {
   width: 25px;
   height: 30px;
   font-size: 25px;
-  color: #808080; 
+  color: #808080;
   margin-left: 20px;
 }
 
@@ -91,10 +91,6 @@ img {
   color: #8899a6;
   float: right;
   margin-right: 1rem;
-}
-
-.topic-comment {
-  /* margin-top: 20px; */
 }
 
 .user-comment {
@@ -138,9 +134,8 @@ img {
 
 .comment-text ul li span {
   font-size: 13px;
-  color: #808080; 
+  color: #808080;
 }
-
 /*=============================
   new.html.erb
 ==============================*/

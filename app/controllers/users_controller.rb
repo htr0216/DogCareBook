@@ -3,13 +3,12 @@ class UsersController < ApplicationController
     @user = current_user
     @topics = @user.topics.order(created_at: :desc)
   end
-  
+
   def new
     @user = User.new
   end
-  
+
   def create
-    #binding.pry
     @user = User.new(user_params)
     if @user.save
       redirect_to root_path, success: '登録が完了しました'
@@ -18,11 +17,11 @@ class UsersController < ApplicationController
       render :new
     end
   end
-  
+
   def edit
     @user = current_user
   end
-  
+
   def update
     @user = current_user
     if @user.update_attributes(update_params)
@@ -32,15 +31,14 @@ class UsersController < ApplicationController
       render :edit
     end
   end
-  
+
   private
+
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation) #:image, :nickname, :sex, :age
   end
-  
+
   def update_params
     params.require(:user).permit(:name, :email, :image_name, :nickname, :sex, :birth_date)
   end
-  
-  
 end

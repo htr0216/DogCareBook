@@ -37,7 +37,7 @@ class TopicsController < ApplicationController
 
   def create
     @topic = current_user.topics.new(topic_params)
-    
+
     if @topic.save
       redirect_to topics_path, success: '投稿しました'
     else
@@ -47,7 +47,6 @@ class TopicsController < ApplicationController
   end
 
   def destroy
-    #binding.pry
     @topic = current_user.topics.find(params[:id])
     @topic.destroy
     redirect_to topics_path
