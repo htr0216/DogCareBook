@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :events
   get 'topics/new'
   get 'sessions/new'
   root 'pages#index'
