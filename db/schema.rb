@@ -23,12 +23,13 @@ ActiveRecord::Schema.define(version: 2020_05_18_125853) do
   create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.string "body"
-    t.string "color"
-    t.datetime "start_date"
-    t.datetime "end_date"
-    t.integer "user_id"
+    t.string "category", limit: 10
+    t.datetime "start_at"
+    t.datetime "end_at"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_events_on_user_id"
   end
 
   create_table "favorites", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

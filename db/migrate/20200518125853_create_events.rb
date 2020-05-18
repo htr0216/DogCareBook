@@ -3,10 +3,10 @@ class CreateEvents < ActiveRecord::Migration[5.2]
     create_table :events do |t|
       t.string :title
       t.string :body
-      t.string :color
-      t.datetime :start_date
-      t.datetime :end_date
-      t.integer :user_id
+      t.string :category, limit: 10, null: true
+      t.datetime :start_at
+      t.datetime :end_at
+      t.references :user
 
       t.timestamps
     end
