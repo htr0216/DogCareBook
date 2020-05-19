@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%= notice %></p>
 
 <h1>Events</h1>
 
@@ -32,7 +32,9 @@
   </tbody>
 </table>
 
-<br>
-
-<%= link_to '記録する', new_event_path %>
-<div id="calendar"></div>
+<br> -->
+<div class="calendar-list">
+  <%= link_to '記録する', new_event_path, class: "btn-new-calendar" %>
+  
+  <div id="calendar"></div>
+</div>

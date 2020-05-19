@@ -1,3 +1,63 @@
 // Place all the styles related to the events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/*=============================
+  index.html.erb
+=============================*/
+.calendar-list {
+  padding-top: 100px;
+}
+
+.btn-new-calendar {
+  width: 300px;
+  height: 40px;
+  font-size: 20px;
+  color: #fff;
+  display: block;
+  text-align: center;
+  background-color: #fda832;
+  border-bottom: 4px solid #fd9402;
+  border-radius: 4px;
+  margin-left: 130px;
+}
+
+.btn-new-calendar:active {
+  -webkit-transform: translateY(4px);
+  border-bottom: none;
+  transform: translateY(4px);
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  background-color: #fdbd62;
+}
+
+.fc-header-toolbar {
+  width: 1200px;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.fc-center h2 {
+  color: #fda832;
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.fc-basic-view {
+  width: 1200px;
+  height: 600px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.fc-ltr{
+  height: 500px;
+}
+
+.fc-sun {
+  color: red;
+  background-color: #fff0f0;
+}
+
+.fc-sat {
+  color: blue;
+  background-color: #f0f0ff;
+}
