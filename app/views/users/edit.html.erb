@@ -2,13 +2,13 @@
   <div class="container">
     <div class="users-edit-container">
       <h1 class="text-center">プロフィール編集</h1>
-    
+
       <%= form_for @user, url: user_path do |f| %>
         <div class="form-group">
           <%= f.label :image_name, 'image' %>
           <%= f.file_field :image_name %>
         </div>
-        <div class="form-group"> 
+        <div class="form-group">
           <%= f.label :name, class: 'text-white' %>
           <%= f.text_field :name, class: 'form-control' %>
         </div>
@@ -23,7 +23,7 @@
         <div class="form-group">
           <%= f.label :birth_date, '愛犬のお誕生日' %>
           <%= f.date_field :birth_date, class: 'form-control' %>
-        </div> 
+        </div>
         <div class="form-group">
           <%= f.label :sex, '性別' %>
           <%= f.text_field :sex, class: 'form-control' %>
@@ -35,4 +35,4 @@
       <% end %>
     </div>
   </div>
-</div>     
+</div>
