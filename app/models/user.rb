@@ -21,14 +21,15 @@ class User < ApplicationRecord
   validates :email, presence: true,  format: { with: VALID_EMAIL_REGEX }
   validates :password, presence: true, on: :create, format: { with: VALID_PASSWORD_REGEX }
   validates :nickname, length: { maximum: 50 }
-  
+
   has_secure_password
-  
+
   mount_uploader :image_name, ImageUploader
-  
+
   has_many :topics
   has_many :favorites
   has_many :favorite_topics, through: :favorites, source: "topic"
   has_many :comments
   has_many :comment_topics, through: :comments, source: "topic"
+  has_many :events
 end
