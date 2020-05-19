@@ -20,10 +20,10 @@
       <tr>
         <td><%= event.title %></td>
         <td><%= event.body %></td>
-        <td><%= event.color %></td>
-        <td><%= event.start_date %></td>
-        <td><%= event.end_date %></td>
-        <td><%= event.user_id %></td>
+        <td><%= event.category %></td>
+        <td><%= event.start_at %></td>
+        <td><%= event.end_at %></td>
+        <td><%= event.user %></td>
         <td><%= link_to 'Show', event %></td>
         <td><%= link_to 'Edit', edit_event_path(event) %></td>
         <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
