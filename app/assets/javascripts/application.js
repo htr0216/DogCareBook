@@ -80,10 +80,10 @@ $(function () {
                   console.log(event);
                   if (event.category === "food") {
                       //foodだったら
-                      element.css("background-color", "#fda832");
+                      element.css("background-color", "#c1fe96");
                   } else if (event.category === "health") {
                       //healthだったら
-                      element.css("background-color", "#93df96");
+                      element.css("background-color", "#fdb858");
                   } else if (event.category === "medicine") {
                       //medicineだったら
                       element.css("background-color", "#f1d2ed");

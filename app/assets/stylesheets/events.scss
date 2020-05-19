@@ -79,3 +79,45 @@
 .new-event {
   text-align: center;
 }
+
+.text-white {
+  color: #fda52b;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.new-form-control {
+  width: 400px;
+  height: 100px;
+  border: 3px solid #fec87d;
+  border-radius: 5px;
+  resize: none;
+}
+
+.color-select {
+  border: 1px solid #d6d6d6;
+  border-radius: 5px;
+  height: 30px;
+}
+
+.color-select.Health {
+  background-color: #fdb858;
+}
+
+.color-select.Food {
+  background-color: #c1fe96;
+}
+
+.color-select.Medicine {
+  background-color: #f1d2ed;
+}
+
+.color-select.Hospital {
+  background-color: #a7e4e5;
+}
+
+textarea::placeholder {
+  color: #bababa;
+  font-size: 14px;
+}

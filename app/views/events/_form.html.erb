@@ -14,17 +14,20 @@
   <div class="new-event-form">
     <div class="form-group">
       <%= form.label :title, "タイトル", class: 'text-white' %>
-      <%= form.text_field :title, class: 'form-control' %>
+      <%= form.text_field :title, placeholder: "例)病院, 予防接種, 健康状態 ..etc", class: 'form-control' %>
     </div>
 
+    <%= form.label :category, "カテゴリー", class: 'text-white' %>
     <div class="form-group">
-      <%= form.label :category, class: 'text-white' %>
-      <%= form.text_field :category, class: 'form-control' %>
+      <% Event.categories.values.each do |category| %>
+        <%= form.radio_button :category, category, class: 'new-color' %>
+        <%= form.label :category, category, class: "color-select #{category}" %>
+      <% end %>
     </div>
 
     <div class="form-group">
       <%= form.label :body, "記録内容", class: 'text-white' %>
-      <%= form.text_field :body, class: 'form-control' %>
+      <%= form.text_area :body, placeholder: "例)ワクチン接種(フィラリア), 便の色,ご飯(多,ドッグフード) ..etc", class: 'new-form-control' %>
     </div>
 
     <div class="form-group">
