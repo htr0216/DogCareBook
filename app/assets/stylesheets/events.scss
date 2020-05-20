@@ -10,7 +10,7 @@
 }
 
 .btn-new-calendar {
-  width: 250px;
+  width: 200px;
   height: 40px;
   font-size: 20px;
   color: #fff;
@@ -19,7 +19,7 @@
   background-color: #fda832;
   border-bottom: 4px solid #fd9402;
   border-radius: 4px;
-  margin-left: 70px;
+  margin-left: 50px;
 }
 
 .btn-new-calendar:active {
@@ -37,6 +37,10 @@
   padding-right: 50px;
 }
 
+.fc-toolbar .fc-center {
+  margin-left: 150px;
+  display: inline-block;
+}
 .fc-center h2 {
   width: 300px;
   color: #fda832;
@@ -66,13 +70,11 @@
   color: blue;
   background-color: #f0f0ff;
 }
-
 /*=============================
   new.html.erb
 =============================*/
 .event-new-container {
   padding-top: 100px;
-
   margin-left: auto;
   margin-right: auto;
 }
