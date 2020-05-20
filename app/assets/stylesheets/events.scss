@@ -5,11 +5,12 @@
   index.html.erb
 =============================*/
 .calendar-list {
+  width: 100%;
   padding-top: 100px;
 }
 
 .btn-new-calendar {
-  width: 300px;
+  width: 250px;
   height: 40px;
   font-size: 20px;
   color: #fff;
@@ -18,7 +19,7 @@
   background-color: #fda832;
   border-bottom: 4px solid #fd9402;
   border-radius: 4px;
-  margin-left: 130px;
+  margin-left: 70px;
 }
 
 .btn-new-calendar:active {
@@ -30,22 +31,26 @@
 }
 
 .fc-header-toolbar {
-  width: 1200px;
+  width: 100%;
   height: 60px;
   margin: 0 auto;
+  padding-right: 50px;
 }
 
 .fc-center h2 {
+  width: 300px;
   color: #fda832;
   font-size: 34px;
   font-weight: bold;
 }
 
+.fc-view-container {
+  margin: 0 50px;
+}
 .fc-basic-view {
-  width: 1200px;
+  width: 100%;
   height: 600px;
   margin: 0 auto;
-  padding-bottom: 50px;
 }
 
 .fc-ltr{
