@@ -121,3 +121,47 @@ textarea::placeholder {
   color: #bababa;
   font-size: 14px;
 }
+/*=============================
+  show.html.erb
+=============================*/
+.show-calendar-list {
+  padding-top: 100px;
+}
+
+.show-event {
+  width: 750px;
+  height: 450px;
+  background-color: #fefdfb;
+  box-shadow: 0 0 6px 3px #eac48f;
+  border: 3px dashed #fda832;
+  border-radius: 15px;
+  margin: 0 auto;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.show-event-detail {
+  margin-bottom: 85px;
+}
+
+.show-event p {
+  width: 500px;
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+strong {
+  color: #fda832;
+  font-size: 23px;
+  font-weight: bold;
+  border: 3px outset  #fda832;
+  padding: 4px;
+}
+
+.show-event span {
+  color: #707070;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 5px;
+}

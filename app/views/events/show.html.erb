@@ -1,34 +1,36 @@
-<p id="notice"><%= notice %></p>
+<div class="show-calendar-list">
+  <h1 class="text-center">記録詳細</h1>
 
-<p>
-  <strong>Title:</strong>
-  <%= @event.title %>
-</p>
+  <div class="show-event">
+    <div class="show-event-detail">
+      <p>
+        <strong>タイトル</strong>
+        <span><%= @event.title %></span>
+      </p>
 
-<p>
-  <strong>Body:</strong>
-  <%= @event.body %>
-</p>
+      <p>
+        <strong>カテゴリ</strong>
+        <span><%= @event.category %></span>
+      </p>
 
-<p>
-  <strong>category:</strong>
-  <%= @event.category %>
-</p>
+      <p>
+        <strong>記録内容</strong>
+        <span><%= @event.body %></span>
+      </p>
 
-<p>
-  <strong>Start date:</strong>
-  <%= @event.start_at %>
-</p>
+      <p>
+        <strong>開始時間</strong>
+        <span><%= @event.start_at %></span>
+      </p>
 
-<p>
-  <strong>End date:</strong>
-  <%= @event.end_at %>
-</p>
+      <p>
+        <strong>終了時間</strong>
+        <span><%= @event.end_at %></span>
+      </p>
+    </div>
 
-<p>
-  <strong>User:</strong>
-  <%= @event.user %>
-</p>
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+    <%= link_to '変更する', edit_event_path(@event) %> |
+    <%= link_to 'カレンダーへ戻る', events_path %> |
+    <%= link_to '削除', @event, method: :delete, data: { confirm: '削除してもいいですか?' } %>
+  </div>
+</div>
