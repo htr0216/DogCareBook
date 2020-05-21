@@ -1,0 +1,18 @@
+ja:
+  activerecord:
+    models:
+      event: イベント
+    attributes:
+      event:
+        title: タイトル
+        body: 記録内容
+        category: カテゴリー
+        start_at: 開始時間
+        end_at: 終了時間
+  enums:
+    event:
+      category:
+        health: 体調
+        food: ご飯
+        medicine: お薬
+        hospital: 病院
