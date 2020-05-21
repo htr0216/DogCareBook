@@ -22,7 +22,7 @@
     </div>
     <ul class="header-menus">
       <% if logged_in? %>
-        <li>
+        <li class="<%= navigation_item_class("events") %>">
           <%= link_to 'カレンダー', events_path, class: 'btn-block' %>
         </li>
         <li class="<%= navigation_item_class("topics", except: "new") %>">
