@@ -8,6 +8,8 @@ ja:
         email: Eメール
         password: パスワード
         nickname: 愛犬の名前
+        sex: 性別
+        birth_date: 愛犬の誕生日
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
