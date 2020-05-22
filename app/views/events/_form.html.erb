@@ -13,9 +13,9 @@
 
     <%= form.label :category, "カテゴリー", class: 'text-white' %>
     <div class="form-group">
-      <% Event.categories.values.each do |category| %>
-        <%= form.radio_button :category, category, class: 'new-color' %>
-        <%= form.label :category, category, class: "color-select #{category}" %>
+      <% Event.categories.keys.each do |key| %>
+        <%= form.radio_button :category, Event.categories[key], class: 'new-color' %>
+        <%= form.label :category, Event.categories_i18n[key], class: "color-select #{key}" %>
       <% end %>
     </div>
 
