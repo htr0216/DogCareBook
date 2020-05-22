@@ -80,7 +80,7 @@
 }
 
 .new-event-form {
-  padding: 40px 0 15px 0;
+  padding: 20px 0 15px 0;
 }
 
 .new-event {
@@ -104,23 +104,26 @@
 
 .color-select {
   border: 1px solid #d6d6d6;
+  color: #595959;
+  padding: 3px 10px;
+  margin-right: 10px;
   border-radius: 5px;
   height: 30px;
 }
 
-.color-select.Health {
+.color-select.health {
   background-color: #fdb858;
 }
 
-.color-select.Food {
+.color-select.food {
   background-color: #c1fe96;
 }
 
-.color-select.Medicine {
+.color-select.medicine {
   background-color: #f1d2ed;
 }
 
-.color-select.Hospital {
+.color-select.hospital {
   background-color: #a7e4e5;
 }
 
