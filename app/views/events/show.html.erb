@@ -10,22 +10,22 @@
 
       <p>
         <strong>カテゴリ</strong>
-        <span><%= @event.category_i18n %></span>
+        <span class="color-select <%= @event.category %>"><%= @event.category_i18n %></span>
       </p>
 
       <p>
         <strong>記録内容</strong>
-        <span><%= @event.body %></span>
+        <span><%= hbr @event.body %></span>
       </p>
 
       <p>
         <strong>開始時間</strong>
-        <span><%= @event.start_at %></span>
+        <span><%= I18n.l(@event.start_at, format: :long) %></span>
       </p>
 
       <p>
         <strong>終了時間</strong>
-        <span><%= @event.end_at %></span>
+        <span><%= I18n.l(@event.end_at, format: :long) %></span>
       </p>
     </div>
 
