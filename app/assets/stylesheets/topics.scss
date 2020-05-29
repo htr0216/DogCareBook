@@ -148,20 +148,20 @@ img {
   width: 300px;
   height: 40px;
   font-size: 20px;
-  color: #919191;
   margin: 0 auto;
   display: block;
   border-radius: 5%;
   background-color: #fda832;
-  border-bottom: 4px solid #fd9402;
+  border: 2px solid #fd9402;
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
   border-radius: 3px;
   color: #fff;
 }
 
 .new-block:active {
-  -webkit-transform: translateY(4px);
+  -webkit-transform: translateY(2px);
   border-bottom: none;
-  transform: translateY(4px);
+  transform: translateY(2px);
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
   background-color: #fdbd62;
 }

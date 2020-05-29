@@ -161,7 +161,7 @@ i {
 }
 
 .feature-card-subheading {
-  font-size: 15px;
+  font-size: 18px;
   width: 300px;
   font-weight: 300;
   letter-spacing: 2px;
@@ -178,16 +178,30 @@ i {
 
 .btn-primary {
   background-color:#fda832;
-  border-bottom: 4px solid #fd9402;
+  border: 2px solid #fd9402;
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+  border-color: #fd9402;
   border-radius: 100px;
-  padding: 30px 30px 30px 30px;
+  padding: 30px 40px 30px 40px;
   font-size: 25px;
   cursor: pointer;
 }
 
 .btn-primary:active {
-  -webkit-transform: translateY(4px);
+  -webkit-transform: translateY(2px);
   background-color: #fdbd62;
+  border-color: #fd9402;
+}
+
+.btn-primary:hover {
+  background-color: #fdbd62;
+  border-color: #fd9402;
+}
+
+.btn-primary:active:hover {
+  -webkit-transform: translateY(2px);
+  background-color: #fdbd62;
+  border-color: #fd9402;
 }
 
 .btn-primary i {
