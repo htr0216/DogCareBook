@@ -10,7 +10,7 @@
           <%= I18n.l(@topic.created_at, format: :long) %>
         </p>
         <%= image_tag @topic.image.url %>
-          
+        
         <p class="topic-text">
           <%= simple_format(@topic.description) %>
         </p>
