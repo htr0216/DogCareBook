@@ -51,7 +51,7 @@ header {
 .header-menus li {
   float: left;
   line-height: 64px;
-  font-size: 16px;
+  font-size: 13px;
   color: white;
   padding: 0 15px;
 }
@@ -62,7 +62,7 @@ header {
 
 .header-menus a {
   float: left;
-  font-size: 16px;
+  font-size: 13px;
   color: white;
 }
 
@@ -89,7 +89,7 @@ header {
 }
 
 .top-message h2{
-  font-size: 100px;
+  font-size: 87px;
   font-weight: 900;
   line-height: 1.3;
   margin-bottom: 20px;
@@ -128,7 +128,7 @@ header {
 .feature-subheading {
   color: gray;
   margin-bottom: 20px;
-  font-size: 28px;
+  font-size: 20px;
 }
 
 .feature-cards {
@@ -138,12 +138,14 @@ header {
 }
 
 .feature-card {
+  height: 350px;
   background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 0 8px gray;
-  margin-top: 40px;
+  box-shadow: 0 0 4px 2px #eac48f;
+  margin: 45px 15px;
+  padding: 0 40px;
 }
 
 i {
@@ -152,7 +154,7 @@ i {
 }
 
 .feature-card-heading {
-  font-size: 27px;
+  font-size: 25px;
   font-weight: 700;
   letter-spacing: 3px;
   border-bottom: 1px solid darkgray;
@@ -161,12 +163,12 @@ i {
 }
 
 .feature-card-subheading {
-  font-size: 19px;
+  font-size: 18px;
   width: 300px;
   font-weight: 300;
   letter-spacing: 2px;
   color: gray;
-  padding: 5px 15px 45px 15px;
+  padding: 5px 10px 30px 10px;
   text-align: center;
 }
 
