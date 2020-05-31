@@ -83,3 +83,8 @@ header {
   margin-bottom: 20px;
 }
 
+@media all and (max-width: 670px) {
+  .form-group {
+    width: 250px;
+  }
+}
