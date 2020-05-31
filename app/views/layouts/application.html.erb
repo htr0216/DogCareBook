@@ -21,32 +21,63 @@
         Dog Care Book
       <% end %>
     </div>
-    <ul class="header-menus">
-      <% if logged_in? %>
-        <li class="<%= navigation_item_class("events") %>">
-          <%= link_to 'カレンダー', events_path, class: 'btn-block' %>
-        </li>
-        <li class="<%= navigation_item_class("topics", except: "new") %>">
-          <%= link_to '投稿一覧', topics_path, class: 'btn-block' %>
-        </li>
-        <li class="<%= navigation_item_class("topics", "new") %>">
-          <%= link_to '新規投稿', new_topic_path, class: 'btn-block' %>
-        </li>
-        <li class="<%= navigation_item_class("users") %>">
-          <%= link_to 'マイページ', user_path(current_user.id), class: 'btn-block' %>
-        </li>
-        <li>
-          <%= link_to 'ログアウト', logout_path, method: :delete %>
-        </li>
-      <% else %>
-        <li class="<%= navigation_item_class("users", "new") %>">
-          <%= link_to '新規登録', new_user_path, class: 'btn-block' %>
-        </li>
-        <li class="<%= navigation_item_class("sessions", "new") %>">
-          <%= link_to 'ログイン', login_path, class: 'btn-block' %>
-        </li>
-      <% end %>
-    </ul>
+
+    <div class="menu-btn">
+      <span class="fa fa-bars menu-icon"></span>
+      <ul class="menu">
+        <% if logged_in? %>
+          <li class="<%= navigation_item_class("events") %>">
+            <%= link_to 'カレンダー', events_path, class: 'menu__item' %>
+          </li>
+          <li class="<%= navigation_item_class("topics", except: "new") %>">
+            <%= link_to '投稿一覧', topics_path, class: 'menu__item' %>
+          </li>
+          <li class="<%= navigation_item_class("topics", "new") %>">
+            <%= link_to '新規投稿', new_topic_path, class: 'menu__item' %>
+          </li>
+          <li class="<%= navigation_item_class("users") %>">
+            <%= link_to 'マイページ', user_path(current_user.id), class: 'menu__item' %>
+          </li>
+          <li>
+            <%= link_to 'ログアウト', logout_path, method: :delete %>
+          </li>
+        <% else %>
+          <li class="<%= navigation_item_class("users", "new") %>">
+            <%= link_to '新規登録', new_user_path, class: 'menu__item' %>
+          </li>
+          <li class="<%= navigation_item_class("sessions", "new") %>">
+            <%= link_to 'ログイン', login_path, class: 'menu__item' %>
+          </li>
+        <% end %>
+      </ul>
+      </div>
+
+      <ul class="header-menus">
+        <% if logged_in? %>
+          <li class="<%= navigation_item_class("events") %>">
+            <%= link_to 'カレンダー', events_path, class: 'btn-block' %>
+          </li>
+          <li class="<%= navigation_item_class("topics", except: "new") %>">
+            <%= link_to '投稿一覧', topics_path, class: 'btn-block' %>
+          </li>
+          <li class="<%= navigation_item_class("topics", "new") %>">
+            <%= link_to '新規投稿', new_topic_path, class: 'btn-block' %>
+          </li>
+          <li class="<%= navigation_item_class("users") %>">
+            <%= link_to 'マイページ', user_path(current_user.id), class: 'btn-block' %>
+          </li>
+          <li>
+            <%= link_to 'ログアウト', logout_path, method: :delete %>
+          </li>
+        <% else %>
+          <li class="<%= navigation_item_class("users", "new") %>">
+            <%= link_to '新規登録', new_user_path, class: 'btn-block' %>
+          </li>
+          <li class="<%= navigation_item_class("sessions", "new") %>">
+            <%= link_to 'ログイン', login_path, class: 'btn-block' %>
+          </li>
+        <% end %>
+      </ul>
   </header>
 
     <!-- カレンダー追加分 -->
@@ -58,6 +89,12 @@
   $(function(){
     $(".alert").fadeOut(5000);
   });
+
+$(function(){
+  $('.menu-btn').on('click', function(){
+    $('.menu').toggleClass('is-active');
+  });
+}());
 </script>
 
   </body>

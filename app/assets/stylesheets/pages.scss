@@ -43,6 +43,89 @@ header {
   font-size: 22px;
 }
 
+.menu-icon {
+  color: white;
+  float: right;
+  font-size: 25px;
+  padding: 21px 20px;
+  display: none;
+}
+
+.menu {
+  display: none;
+}
+
+@media all and (max-width: 670px) {
+  .menu-btn{
+    position: fixed;
+    top: 15px;
+    right: 30px;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+
+  /*--メニュー本体--*/
+  .menu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 100vw;    /* 100から変更 */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(22, 22, 28, 0.4);
+  }
+
+  .sp-nav {
+    display: block;
+  }
+
+  .header-menus {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .menu__item{
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+
+  .menu__item:hover {
+    color: #c5cbe1;
+    font-size: 24px;
+  }
+
+  .menu li {
+    padding: 10px 0;
+  }
+
+  .menu{
+    transform: translateX(100vw);
+    transition: all .5s ease;
+  }
+  /* アニメーション後のメニューの状態 */
+  .menu.is-active{
+    transform: translateX(0);
+  }
+}
+
 .header-menus {
   float: right;
   padding-right: 20px;
