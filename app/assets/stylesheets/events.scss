@@ -71,6 +71,39 @@
   color: blue;
   background-color: #f0f0ff;
 }
+
+@media all and (max-width: 670px) {
+  .btn-new-calendar {
+    width: 100px;
+    font-size: 15px;
+    padding: 5px 0;
+  }
+
+  .fc-header-toolbar {
+    height: 10px;
+    margin-top: 20px;
+    padding-right: 30px;
+  }
+
+  .fc-toolbar .fc-center {
+    margin-left: 50px;
+  }
+
+  .fc-center h2 {
+    width: 100%;
+    font-size: 25px;
+    width: 100%;
+  }
+
+  .fc-toolbar .fc-right {
+    width: 120px;
+    font-size: 13px;
+  }
+
+  .fc-view-container {
+    margin: 5px 20px;
+  }
+}
 /*=============================
   new.html.erb
 =============================*/
@@ -131,6 +164,9 @@
 textarea::placeholder {
   color: #bababa;
   font-size: 14px;
+}
+@media all and (max-width: 670px) {
+
 }
 /*=============================
   show.html.erb

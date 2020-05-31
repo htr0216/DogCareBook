@@ -65,7 +65,7 @@ $(function () {
           week: '週',
           day: '日'
         },
-        height: 960,
+        height: 800,
         // Drag & Drop & Resize
         editable: true,
         eventLimit: true,
