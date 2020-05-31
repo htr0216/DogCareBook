@@ -195,6 +195,19 @@ header {
   color: #fda832;
 }
 
+.user-list {
+  width: 400px;
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+  color: #fda832;
+  margin-top: 50px;
+  margin: 0 auto;
+  padding: 30px 25px;
+  border: 2px solid #fd9f1c;
+  border-radius: 25px;
+}
+
 .user-topic-single {
   width: 600px;
   background-color: white;
@@ -214,6 +227,34 @@ header {
   text-decoration: underline;
   font-size: 14px;
   margin-right: 1rem;
+}
+
+@media all and (max-width: 670px) {
+  .user {
+    padding:30px 20px;
+    margin-bottom: 50px;
+  }
+
+  .user-image img {
+    width: 300px;
+    margin-bottom: 30px;
+  }
+
+  .user-informations {
+    margin-left: 25px;
+  }
+
+  .user-topic-single {
+    width: 300px;
+    font-size: 18px;
+    margin-top: 40px;
+  }
+
+  .user-list {
+    width: 200px;
+    font-size: 18px;
+    margin-top: 10px;
+  }
 }
 /*=============================
   edit.html.erb
