@@ -84,6 +84,50 @@ img {
   color: #e54747;
   margin-left: 20px;
 }
+
+@media all and (max-width: 670px) {
+  .topic-list {
+    width: 200px;
+    font-size: 18px;
+    margin-right: 10px;
+    margin-top: 40px;
+  }
+
+  .topic-row {
+    padding-top: 50px;
+  }
+
+  .topic-index-single {
+    width: 300px;
+    padding: 25px 0;
+  }
+
+  .topic-author {
+    font-size: 18px;
+  }
+
+  .topic-time {
+    font-size: 14px;
+  }
+
+  img {
+    margin-bottom: 5px;
+  }
+
+  .like-btn {
+    height: 20px;
+    margin-left: 10px;
+  }
+
+  .unlike-btn {
+    height: 20px;
+    margin-left: 10px;
+  }
+
+  .topic-index-icon {
+    margin-left: 10px;
+  }
+}
 /*=============================
   show.html.erb
 ==============================*/
