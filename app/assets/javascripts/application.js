@@ -23,6 +23,11 @@
 //= require fullcalendar
 
 $(function () {
+  var windowWidth = window.innerWidth;
+  var height = 800;
+  if (windowWidth <= 670) {
+    height = 650;
+  }
   // 画面遷移を検知
   $(document).on('turbolinks:load', function () {
     if ($('#calendar').length) {
@@ -65,7 +70,7 @@ $(function () {
           week: '週',
           day: '日'
         },
-        height: 800,
+        height: height,
         // Drag & Drop & Resize
         editable: true,
         eventLimit: true,
