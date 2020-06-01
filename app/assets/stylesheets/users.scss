@@ -244,6 +244,22 @@ header {
     margin-left: 25px;
   }
 
+  .user-group {
+    margin-bottom: 10px;
+  }
+
+  .user-group h3 {
+    font-size: 20px;
+    width: 70%;
+    margin: 0 0 0 10%;
+  }
+
+  .user-group p {
+    font-size: 17px;
+    width: 70%;
+    margin-left: 10%;
+  }
+
   .user-topic-single {
     width: 300px;
     font-size: 18px;
@@ -254,6 +270,11 @@ header {
     width: 200px;
     font-size: 18px;
     margin-top: 10px;
+  }
+
+  .user-white {
+    width: 30%;
+    margin: 10% 30% 0 30%;
   }
 }
 /*=============================

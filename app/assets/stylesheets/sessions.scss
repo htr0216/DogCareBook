@@ -85,7 +85,11 @@ header {
 
 @media all and (max-width: 670px) {
   .form-group {
-    width: 250px;
+    width: 90%;
+  }
+
+  select {
+    font-size: 10px;
   }
 
   .text-center {
