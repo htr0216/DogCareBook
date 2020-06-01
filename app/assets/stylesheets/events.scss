@@ -73,6 +73,10 @@
 }
 
 @media all and (max-width: 670px) {
+  .calendar-list {
+    padding-top: 80px;
+  }
+
   .btn-new-calendar {
     width: 100px;
     font-size: 15px;
@@ -102,6 +106,10 @@
 
   .fc-view-container {
     margin: 5px 20px;
+  }
+
+  .fc-view {
+    z-index: 0;
   }
 }
 /*=============================
@@ -136,6 +144,13 @@
   resize: none;
 }
 
+.color-group {
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .color-select {
   border: 1px solid #d6d6d6;
   color: #595959;
@@ -143,6 +158,13 @@
   margin-right: 10px;
   border-radius: 5px;
   height: 30px;
+}
+
+.time-group {
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .color-select.health {
@@ -166,7 +188,27 @@ textarea::placeholder {
   font-size: 14px;
 }
 @media all and (max-width: 670px) {
+  .color-group {
+    width: 300px;
+  }
 
+  .color-select {
+    font-size: 13px;
+    padding: 3px 5px;
+    height: 25px;
+  }
+
+  .new-form-control  {
+    width: 100%;
+  }
+
+  .text-white {
+    font-size: 16px;
+  }
+
+  .time-group {
+    width: 100%;
+  }
 }
 /*=============================
   show.html.erb

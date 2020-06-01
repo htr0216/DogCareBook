@@ -12,7 +12,7 @@
     </div>
 
     <%= form.label :category, "カテゴリー", class: 'text-white' %>
-    <div class="form-group">
+    <div class="color-group">
       <% Event.categories.keys.each do |key| %>
         <%= form.radio_button :category, Event.categories[key], class: 'new-color' %>
         <%= form.label :category, Event.categories_i18n[key], class: "color-select #{key}" %>
@@ -24,13 +24,13 @@
       <%= form.text_area :body, placeholder: "例)ワクチン接種(フィラリア), 便の色,ご飯(多,ドッグフード) ..etc", class: 'new-form-control' %>
     </div>
 
-    <div class="form-group">
-      <%= form.label :start_at, "開始時間", class: 'text-white' %>
+    <div class="time-group">
+      <%= form.label :start_at, "開始時間", class: 'text-white' %><br>
       <%= form.datetime_select :start_at, class: 'form-control' %>
     </div>
 
-    <div class="form-group">
-      <%= form.label :end_at, "終了時間", class: 'text-white' %>
+    <div class="time-group">
+      <%= form.label :end_at, "終了時間", class: 'text-white' %><br>
       <%= form.datetime_select :end_at, class: 'form-control' %>
     </div>
   </div>
