@@ -254,3 +254,29 @@ strong {
   font-weight: bold;
   margin-left: 5px;
 }
+
+@media all and (max-width: 670px) {
+  .show-event {
+    width: 90%;
+    height: auto;
+  }
+
+  .show-event p {
+    width: 90%;
+    margin-top: 15px;
+    margin-left: 5px;
+  }
+
+  strong {
+    font-size: 16px;
+    padding: 2px;
+  }
+
+  .show-event span {
+    font-size: 14px;
+  }
+
+  .show-event-detail {
+    margin-bottom: 40px;
+  }
+}
